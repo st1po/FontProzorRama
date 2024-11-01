@@ -1,3 +1,4 @@
+/* Osnovni stilovi */
 body {
     font-family: 'Courier New', Courier, monospace; /* Postavljanje fonta */
     background: #669980; /* Gradient boja #669980 */
@@ -6,17 +7,20 @@ body {
     padding: 0;
     text-align: center; /* Centriranje teksta */
 }
+
 header {
     background-color: #0073e6;
     padding: 20px;
     color: white;
 }
+
 section {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto; /* Središnje poravnanje */
     text-align: center;
 }
+
 .intro-text, .about-us, .donation-message, .location, .contact {
     font-size: 1.2em;
     background-color: rgba(255, 255, 255, 0.9); /* Polu-prozirna bijela pozadina */
@@ -24,28 +28,35 @@ section {
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
 .about-us h2, .donation-message h2, .location h2, .contact h2 {
     font-size: 1.5em;
     color: #0073e6;
 }
+
 .quote {
     font-style: italic;
     margin: 20px 0;
 }
+
 .image-gallery {
     margin: 20px 0;
 }
+
 .image-container {
     display: flex;
+    flex-wrap: wrap; /* Omogućuje prelamanje slika */
     justify-content: center;
     gap: 10px; /* Razmak između slika */
 }
+
 .image-container img {
     width: 30%; /* Postavite širinu svake slike */
     height: auto;
     border-radius: 5px; /* Zaobljeni rubovi slika */
     border: 2px solid #d4af37; /* Tanki svjetlo zlatni okvir */
 }
+
 .donate-button {
     padding: 10px 20px;
     background-color: #28a745;
@@ -56,15 +67,18 @@ section {
     display: inline-block;
     margin-top: 20px;
 }
+
 .donate-button:hover {
     background-color: #218838;
 }
+
 footer {
     padding: 10px;
     background-color: #0073e6;
     color: white;
     margin-top: 20px;
 }
+
 .link {
     display: inline-block;
     margin-top: 10px;
@@ -72,9 +86,11 @@ footer {
     color: #0073e6;
     text-decoration: none;
 }
+
 .link:hover {
     text-decoration: underline;
 }
+
 /* Form Style */
 form {
     display: flex;
@@ -82,6 +98,7 @@ form {
     align-items: center; /* Centriranje forme */
     margin-top: 20px;
 }
+
 form input, form textarea {
     width: 80%; /* Širina input polja */
     padding: 10px;
@@ -89,6 +106,7 @@ form input, form textarea {
     border-radius: 5px;
     border: 1px solid #ccc; /* Imitacija rubova */
 }
+
 form button {
     background-color: #0073e6;
     color: white;
@@ -97,6 +115,30 @@ form button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 form button:hover {
     background-color: #005bb5;
-} 
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .image-container img {
+        width: 100%; /* Slike zauzimaju punu širinu na mobilnim uređajima */
+    }
+
+    .section-content {
+        padding: 10px; /* Manje paddinga na mobilnim uređajima */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Manji font za naslove */
+    }
+
+    header p {
+        font-size: 1em; /* Manji font za opis */
+    }
+
+    .donate-button {
+        width: 90%; /* Širina dugmeta za donaciju */
+    }
+}
