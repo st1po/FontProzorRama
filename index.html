@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FondProzorRama - Dobrotvorna Stranica</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Osnovni stilovi */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #669980;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .top-bar {
+            background-color: #004080;
+            color: white;
+            padding: 5px 0;
+            font-size: 0.9em;
+        }
+        .top-bar a, .top-bar p {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        header {
+            background-color: #0073e6;
+            padding: 20px;
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #333;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #0073e6;
+        }
+        /* Sekcije */
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .section-content {
+            display: none; /* Skriva sekcije po defaultu */
+            background-color: #ffffff;
+            border: 2px solid #0073e6;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section-content h2 {
+            color: #004080;
+        }
+        .active {
+            display: block; /* Prikazuje samo aktivnu sekciju */
+            opacity: 1;
+        }
+    </style>
+    <script>
+        // JavaScript za prikaz sekcija
+        function showSection(id) {
+            document.querySelectorAll('.section-content').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+<div class="top-bar">
+    <p>📞 063 315 024</p>
+    <a href="mailto:katica.dragic1973@gmail.com">✉ katica.dragic1973@gmail.com</a>
+</div>
+
+<header>
+    <h1>FondProzorRama</h1>
+    <p>Učinimo "DOBRO" zajedno</p>
+</header>
+
+<!-- Navigacija -->
+<nav>
+    <a href="#naslovnica" onclick="showSection('naslovnica')">NASLOVNICA</a>
+    <a href="#tko-smo-mi" onclick="showSection('tko-smo-mi')">TKO SMO MI</a>
+    <a href="#naša-misija" onclick="showSection('naša-misija')">NAŠA MISIJA</a>
+    <a href="#donacije" onclick="showSection('donacije')">DONACIJE</a>
+    <a href="#galerija" onclick="showSection('galerija')">GALERIJA</a>
+    <a href="#lokacija" onclick="showSection('lokacija')">LOKACIJA</a>
+    <a href="#kontakt" onclick="showSection('kontakt')">KONTAKT</a>
+</nav>
+
+<!-- Sekcije sa sadržajem -->
+<section>
+    <div id="naslovnica" class="section-content active">
+        <p>Dobrodošli na FondProzorRama! Mi smo dobrotvorna organizacija posvećena stvaranju pozitivnih promjena u svijetu.</p>
+    </div>
+
+    <div id="tko-smo-mi" class="section-content">
+        <h2>Tko smo mi</h2>
+        <p>FondProzorRama je neprofitna organizacija utemeljena na uvjerenju da svi možemo nešto promijeniti u svijetu. Naš tim se sastoji od strastvenih pojedinaca koji su posvećeni pomaganju drugima i čineći svijet boljim mjestom.</p>
+        <a href="https://prozor-rama.org/press-centar/obavijesti/in-memoriam-ivan-dragic-1968-2014/108?fbclid=IwAR0gZf3LelxHnyOS_KQciTQfugsjSeLPxHYo3kcGt2-HMGUP60E4zpw1iiI" class="link">Pročitaj više</a>
+    </div>
+
+    <div id="naša-misija" class="section-content">
+        <h2>Naša Misija</h2>
+        <p>Naša je misija pružiti pomoć i potporu onima kojima je potrebna. Vaša nam donacija može pomoći da stvarno utječemo na živote ljudi diljem svijeta.</p>
+    </div>
+
+    <div id="donacije" class="section-content">
+        <h2>Donacije</h2>
+        <p>Dobrota je moćna sila koja ima moć da preobrazi i obogati živote ljudi. Doniranje je jedan od najplemenitijih načina na koji možemo pokazati svoju dobrotu i empatiju.</p>
+        <a href="https://www.example.com/donacije" class="donate-button">Doniraj Sada</a>
+    </div>
+
+    <div id="galerija" class="section-content">
+        <h2>Galerija Slika</h2>
+        <div class="image-container">
+            <img src="križ.jpg" alt="Opis slike 1">
+            <img src="mapa.jpg" alt="Opis slike 2">
+            <img src="grb.jpg" alt="Opis slike 3">
+        </div>
+    </div>
+
+    <div id="lokacija" class="section-content">
+        <h2>Lokacija</h2>
+        <p>Prozor-Rama</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15547.32019533563!2d17.4616376!3d43.3718279!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475fa567eb1399d9%3A0xe6b5a64fd527f7a0!2sProzor-Rama!5e0!3m2!1shr!2sba!4v1698597213454" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div id="kontakt" class="section-content">
+        <h2>Kontakt</h2>
+        <p>katica.dragic1973@gmail.com</p>
+        <p>+063 315 024</p>
+        <form action="submit_feedback.php" method="post">
+            <input type="text" name="ime" placeholder="Ime" required>
+            <input type="text" name="prezime" placeholder="Prezime" required>
+            <input type="tel" name="broj" placeholder="Broj telefona" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <textarea name="poruka" placeholder="Poruka" required></textarea>
+            <button type="submit">Pošaljite</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 FondProzorRama | Sva prava pridržana</p>
+</footer>
+
+</body>
+</html>
